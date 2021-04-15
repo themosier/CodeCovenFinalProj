@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class FireProjectile : MonoBehaviour
 {
+    // Put this on the Player object
+
+    // set bulletPrefab to the projectile prefab
+    // set spawnPoint to the gameObject from which we want to fire the projectiles (i.e.: gun)
+
+    // This should spawn a projectile at the spawnPoint regardless of how it has moved through worldspace
+
     public Object bulletPrefab;
     public GameObject spawnPoint;
 

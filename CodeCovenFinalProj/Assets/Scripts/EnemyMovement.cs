@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    // Put this on enemy prefab
+    
+    // This spawns enemies that move toward the player in a linear fashion
+    // Am going to try and update this to an algorithm to deal with obstacles but for now it's just linear
+
     private Rigidbody rb;
     private Vector3 forward;
 
@@ -26,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
         //Vector3 vec = player.transform.position + rb.position;
         //rb.velocity = -vec * velocity;
 
-        Vector3 vec = new Vector3(EnemyManager.player.transform.position.x, transform.position.y, EnemyManager.player.transform.position.z);
+        Vector3 vec = new Vector3(PlayerManager.player.transform.position.x, transform.position.y, PlayerManager.player.transform.position.z);
 
         transform.position = Vector3.MoveTowards(transform.position, vec, velocity * Time.deltaTime);
     }
