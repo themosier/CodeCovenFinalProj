@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 333957291}
   - component: {fileID: 333957290}
   - component: {fileID: 333957289}
+  - component: {fileID: 333957292}
+  - component: {fileID: 333957293}
   m_Layer: 0
   m_Name: ThirdPersonPlayer
   m_TagString: Player
@@ -188,6 +190,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333957292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333957288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962fc0016a8254e42b4ff0ef0707723a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3758210879952679582, guid: 9c909e649b4e76c4dbc75b89a88239d6,
+    type: 3}
+  spawnPoint: {fileID: 958668907}
+--- !u!114 &333957293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333957288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341159067c47ded4ba34db9e032ccec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508294701
 GameObject:
   m_ObjectHideFlags: 3
@@ -254,7 +283,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508294701}
-  m_LocalRotation: {x: 0.21266396, y: -0.000000015553692, z: 0.000000003385143, w: 0.9771254}
+  m_LocalRotation: {x: 0.21266395, y: 0.000000017460351, z: -0.0000000038001136, w: 0.9771254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1116,7 +1145,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 4
+    m_MaxSpeed: 2
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -1145,7 +1174,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -1403,7 +1432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f389740ff5a1d244db232c63f1b204ed, type: 2}
+  - {fileID: 2100000, guid: c427dfd63ead4db4a8574bd8d6d7bf7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

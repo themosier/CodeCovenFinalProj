@@ -25,7 +25,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (!isSpawning && curEnemies < maxEnemies)
         {
-            //Invoke("SpawnEnemy", 1.0f);
+            Invoke("SpawnEnemy", 1.0f);
             isSpawning = true;
         }
     }

@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "wall")
+        if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
             EnemyManager.curEnemies--;
