@@ -40,8 +40,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
-            EnemyManager.curEnemies--;
+            //Destroy(gameObject);
+            //EnemyManager.curEnemies--;
         }
     }
 }

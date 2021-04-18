@@ -22,12 +22,14 @@ public class DamageEnemy : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            Destroy(collider.gameObject);
             Destroy(gameObject);
+            EnemyManager.curEnemies--;
+            Debug.Log("Hit Enemy");
         }
 
     }

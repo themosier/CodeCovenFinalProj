@@ -27,6 +27,7 @@ public class BulletForce : MonoBehaviour
         if (other.tag == "wall")
         {
             Destroy(gameObject);
+            Debug.Log("Hit wall");
         }
     }
 }

@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
     // obsolete: use PlayerManager.player
     //public static GameObject player;
 
-    public static int maxEnemies = 5;
+    public static int maxEnemies = 10;
     public static int curEnemies;
     private bool isSpawning = false;
 
@@ -29,9 +29,10 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isSpawning && curEnemies < maxEnemies)
+        while (!isSpawning && curEnemies < maxEnemies)
         {
             Invoke("SpawnEnemy", 1.0f); // Change float value to desired spawn interval
+            curEnemies++;
             isSpawning = true;
         }
     }
@@ -40,7 +41,7 @@ public class EnemyManager : MonoBehaviour
     {
         Vector3 pos = GetComponent<Transform>().position;
         Instantiate(enemyPrefab, pos, Quaternion.identity);
-        curEnemies++;
+        //curEnemies++;
         isSpawning = false;
     }
 }
