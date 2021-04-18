@@ -21,4 +21,12 @@ public class BulletForce : MonoBehaviour
     {
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "wall")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
