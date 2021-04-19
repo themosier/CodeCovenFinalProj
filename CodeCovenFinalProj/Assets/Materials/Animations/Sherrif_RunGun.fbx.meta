@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d3fdd2252a5b2124c88fffd9ec8cfcff
+guid: f2a059912dd8c3247aa3d1b83127c288
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -26,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -74,7 +74,7 @@ ModelImporter:
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
-    importLights: 1
+    importLights: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -138,7 +138,7 @@ ModelImporter:
       scale: {x: 0.01, y: 0.01, z: 0.01}
     - name: Sherrif_ROOT
       parentName: Sherrif_JNT
-      position: {x: -0.41894782, y: 198.92982, z: 0}
+      position: {x: -0.41894785, y: 198.92982, z: 0}
       rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Sherrif_jnt1
@@ -148,7 +148,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: L_Arm_jnt1
       parentName: Sherrif_jnt1
-      position: {x: 44.152122, y: 42.878498, z: 0}
+      position: {x: 44.152122, y: 42.8785, z: 0}
       rotation: {x: 0.005746842, y: 0.9999835, z: 6.158322e-17, w: -6.0879434e-17}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Arm_jnt2
@@ -158,22 +158,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: L_Arm_jnt3
       parentName: L_Arm_jnt2
-      position: {x: -77.69191, y: 9.150666e-14, z: -9.5131465e-15}
+      position: {x: -77.69191, y: 9.150666e-14, z: -9.513147e-15}
       rotation: {x: -0.00273221, y: 0.9999963, z: 6.123212e-17, w: -1.6729962e-19}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Leg_jnt1
       parentName: Sherrif_jnt1
-      position: {x: 31.251408, y: 7.5330334, z: 0}
+      position: {x: 31.251408, y: 7.533033, z: 0}
       rotation: {x: 0.48970902, y: 0.87188596, z: 8.3373645e-17, w: -2.3401588e-17}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Leg_jnt2
       parentName: L_Leg_jnt1
-      position: {x: -20.222202, y: 4.1633363e-15, z: -2.4765054e-15}
+      position: {x: -20.222202, y: 4.1633363e-15, z: -2.4765056e-15}
       rotation: {x: -1.917058e-32, y: -5.4620304e-17, z: 0.2642919, w: 0.96444273}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Leg_jnt3
       parentName: L_Leg_jnt2
-      position: {x: -43.71438, y: -7.459311e-15, z: -4.6055862e-15}
+      position: {x: -43.714382, y: -7.459311e-15, z: -4.6055862e-15}
       rotation: {x: 0.7027287, y: 0.7114579, z: 8.659396e-17, w: -5.345102e-19}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Arm_jnt1
@@ -183,27 +183,27 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: R_Arm_jnt2
       parentName: R_Arm_jnt1
-      position: {x: 36.93719, y: 0.00021262965, z: 0}
+      position: {x: 36.93719, y: 0.00021262963, z: 0}
       rotation: {x: 0.000000010536334, y: -8.934056e-11, z: -0.008478985, w: 0.99996406}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Arm_jnt3
       parentName: R_Arm_jnt2
-      position: {x: 77.69191, y: -0.00021037938, z: 4.930375e-30}
+      position: {x: 77.69192, y: -0.0002103794, z: 4.930375e-30}
       rotation: {x: -0.00273221, y: 0.9999963, z: -2.6262567e-14, w: 1.0526583e-17}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Leg_jnt1
       parentName: Sherrif_jnt1
-      position: {x: -30.413553, y: 7.533108, z: 0}
+      position: {x: -30.413553, y: 7.5331087, z: 0}
       rotation: {x: -0, y: 0, z: 0.87188596, w: -0.48970902}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Leg_jnt2
       parentName: R_Leg_jnt1
-      position: {x: 20.222345, y: 0.00012342112, z: -3.0815001e-31}
+      position: {x: 20.222345, y: 0.00012342112, z: -3.0815e-31}
       rotation: {x: -1.5975484e-32, y: 5.4620304e-17, z: 0.2642919, w: 0.96444273}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Leg_jnt3
       parentName: R_Leg_jnt2
-      position: {x: 43.714256, y: -0.00010894231, z: 6.1630003e-31}
+      position: {x: 43.71426, y: -0.00010894231, z: 6.163e-31}
       rotation: {x: 0.7027287, y: 0.7114579, z: 8.659396e-17, w: -5.345102e-19}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5

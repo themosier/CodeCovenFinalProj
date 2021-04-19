@@ -163,7 +163,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: e8965ecc8326ac545bc50702ece7b8aa,
+  m_Motion: {fileID: 1827226128182048838, guid: 73ae1fda52079a74685ae66ed330c204,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -176,7 +176,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sherrif_Controller
+  m_Name: V2_Sherrif_Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isRunning
@@ -272,7 +272,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: f2a059912dd8c3247aa3d1b83127c288,
+  m_Motion: {fileID: 1827226128182048838, guid: da7afd0ab930efc46989fac79cd37914,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
