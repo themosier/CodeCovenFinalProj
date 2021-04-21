@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3895505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6cc7a605d9a0b424c8cbf1640be60953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1084602078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &76073811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 50
+  model: {fileID: 3895505}
+  invincibilityDurationSec: 1
   healthBar: {fileID: 1148450886}
 --- !u!135 &752242645
 SphereCollider:
@@ -1232,7 +1240,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.111825876, y: 0.0000000054715077, z: -6.1571803e-10, w: 0.9937278}
+  m_LocalRotation: {x: 0.11182587, y: -0.000000008549231, z: 9.620593e-10, w: 0.9937278}
   m_LocalPosition: {x: 4.48, y: 4.23925, z: -3.2177544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1830,7 +1838,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359635040}
-  m_LocalRotation: {x: 0.11507044, y: 0.0000000042730215, z: -4.9498644e-10, w: 0.99335736}
+  m_LocalRotation: {x: 0.11507043, y: -0.0000000042730215, z: 4.949865e-10, w: 0.99335736}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -32,9 +32,12 @@ public class EnemyManager : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        Vector3 pos = GetComponent<Transform>().position;
-        EnemyList.Add(Instantiate(enemyPrefab, pos, Quaternion.identity));
-        curEnemies++;
+        if (EnemyList.Count < maxEnemies)
+        {
+            Vector3 pos = GetComponent<Transform>().position;
+            EnemyList.Add(Instantiate(enemyPrefab, pos, Quaternion.identity));
+            curEnemies++;
+        }
 
     }
 }

@@ -14,6 +14,13 @@ public class PlayerManager : MonoBehaviour
     //Player Health System
     public int maxHealth = 50;
     public int currentHealth;
+    private bool isInvincible = false;
+    public GameObject model;
+    private Vector3 modelScale;
+    
+    [SerializeField]
+    private float invincibilityDurationSec;
+    private float invincibilityDeltaTime = 0.15f;
 
     public HealthBar healthBar;
 
@@ -26,6 +33,7 @@ public class PlayerManager : MonoBehaviour
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        modelScale = model.transform.localScale;
     }
 
     // Update is called once per frame
@@ -42,11 +50,56 @@ public class PlayerManager : MonoBehaviour
             TakeDamage(5);
         }
 
-        void TakeDamage (int damage)
-        {
-            currentHealth -= damage;
+       
+    }
 
-            healthBar.SetHealth(currentHealth);
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(5);
         }
+    }
+
+    void TakeDamage(int damage)
+    {
+        if (isInvincible)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+        Debug.Log("Took damage");
+        StartCoroutine(TempInvincibility());
+    }
+
+    IEnumerator TempInvincibility()
+    {
+        Debug.Log("Invincible");
+        isInvincible = true;
+
+
+        for (float i = 0; i < invincibilityDurationSec; i += invincibilityDeltaTime)
+        {
+            // Flash character
+            if (model.transform.localScale == modelScale)
+            {
+                model.transform.localScale = Vector3.zero;
+            }
+            else if (model.transform.localScale == Vector3.zero)
+            {
+                model.transform.localScale = modelScale;
+            }
+
+            yield return new WaitForSeconds(invincibilityDeltaTime);
+        }
+
+        
+
+        isInvincible = false;
+        model.transform.localScale = modelScale;
+        Debug.Log("Not invincible anymore");
     }
 }
