@@ -44,4 +44,17 @@ public class EnemyMovement : MonoBehaviour
             //EnemyManager.curEnemies--;
         }
     }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "bullet")
+        {
+            Destroy(collider.gameObject);
+            Destroy(gameObject);
+            EnemyManager.curEnemies--;
+            FireProjectile.ammoCt++;
+            Debug.Log("Hit Enemy");
+        }
+
+    }
 }

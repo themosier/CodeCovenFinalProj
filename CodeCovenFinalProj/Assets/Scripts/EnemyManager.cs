@@ -9,13 +9,14 @@ public class EnemyManager : MonoBehaviour
     // this spawns enemies from a designated spawn point
 
     public Object enemyPrefab;
-    
+
     // obsolete: use PlayerManager.player
     //public static GameObject player;
 
-    public static int maxEnemies = 10;
+    public static int maxEnemies = 5;
     public static int curEnemies;
-    private bool isSpawning = false;
+    private static List<Object> EnemyList;
+    private float spawnTime = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,25 +24,17 @@ public class EnemyManager : MonoBehaviour
         //player = GameObject.FindWithTag("Player");
 
         curEnemies = 0;
-        SpawnEnemy();
+        EnemyList = new List<Object>();
+
+        InvokeRepeating("SpawnEnemy", spawnTime, spawnTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        while (!isSpawning && curEnemies < maxEnemies)
-        {
-            Invoke("SpawnEnemy", 1.0f); // Change float value to desired spawn interval
-            curEnemies++;
-            isSpawning = true;
-        }
-    }
 
     public void SpawnEnemy()
     {
         Vector3 pos = GetComponent<Transform>().position;
-        Instantiate(enemyPrefab, pos, Quaternion.identity);
-        //curEnemies++;
-        isSpawning = false;
+        EnemyList.Add(Instantiate(enemyPrefab, pos, Quaternion.identity));
+        curEnemies++;
+
     }
 }

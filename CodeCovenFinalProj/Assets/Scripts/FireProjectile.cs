@@ -14,15 +14,17 @@ public class FireProjectile : MonoBehaviour
     public Object bulletPrefab;
     public GameObject spawnPoint;
 
+    public static int ammoCt = 100;
+
     private Vector3 posOffset;
 
     // Start is called before the first frame update
     void Start()
     {
-        float length = spawnPoint.GetComponent<Renderer>().bounds.size.z;
+        /*float length = spawnPoint.GetComponent<Renderer>().bounds.size.z;
         float width = spawnPoint.GetComponent<Renderer>().bounds.size.x;
         Debug.Log(spawnPoint.GetComponent<Renderer>().bounds.size);
-        posOffset = new Vector3(width / 2.0f, 0.0f, length / 2.0f);
+        posOffset = new Vector3(width / 2.0f, 0.0f, length / 2.0f);*/
     }
 
     // Update is called once per frame
@@ -30,13 +32,30 @@ public class FireProjectile : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
-            SpawnBullet();
+            StartCoroutine(CheckAmmo());
+
         }
     }
 
     private void SpawnBullet()
     {
         Vector3 pos = spawnPoint.transform.position;
-        Instantiate(bulletPrefab, pos + posOffset, Quaternion.identity);
+        Instantiate(bulletPrefab, pos, Quaternion.identity);
+        ammoCt--;
+    }
+
+    private IEnumerator CheckAmmo()
+    {
+        if (ammoCt > 0)
+        {
+            SpawnBullet();
+        }
+
+        yield return new WaitForSeconds(1.0f);
+    }
+
+    private void UseAmmo()
+    {
+
     }
 }

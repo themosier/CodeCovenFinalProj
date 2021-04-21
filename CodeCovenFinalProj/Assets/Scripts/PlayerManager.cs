@@ -15,11 +15,16 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
