@@ -42,6 +42,7 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
+            Application.Quit();
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
