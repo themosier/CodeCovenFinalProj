@@ -62,6 +62,7 @@ public class EnemyMovement : MonoBehaviour
         if (collider.gameObject.tag == "bullet")
         {
             Destroy(collider.gameObject);
+            EnemyManager.EnemyList.Remove(gameObject);
             Destroy(gameObject);
             EnemyManager.curEnemies--;
             FireProjectile.ammoCt++;

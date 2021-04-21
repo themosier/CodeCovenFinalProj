@@ -8,6 +8,7 @@ TagManager:
   - bullet
   - Enemy
   - MainCanvas
+  - ScoreText
   layers:
   - Default
   - TransparentFX

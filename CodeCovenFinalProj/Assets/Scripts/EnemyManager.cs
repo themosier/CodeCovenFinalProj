@@ -15,7 +15,7 @@ public class EnemyManager : MonoBehaviour
 
     public static int maxEnemies = 5;
     public static int curEnemies;
-    private static List<Object> EnemyList;
+    public static List<Object> EnemyList;
     private float spawnTime = 2f;
 
     // Start is called before the first frame update

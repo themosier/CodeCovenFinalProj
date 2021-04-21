@@ -44,7 +44,7 @@ public class WeaponManager : MonoBehaviour
         if (currAmmo > 0)
         {
             SpawnBullet();
-            currAmmo -= ammoRegenAmt / 2.0f;
+            currAmmo -= ammoRegenAmt;
         }
 
         yield return new WaitForSeconds(0.2f);
