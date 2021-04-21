@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody rb;
     private Vector3 forward;
+    private Animator anim;
+    private Canvas canvas;
+    private Text text;
+    private static int score = 0;
 
     //public GameObject player;
 
@@ -22,6 +27,12 @@ public class EnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         forward = rb.transform.forward;
+        anim = GetComponent<Animator>();
+
+
+        canvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
+        text = canvas.GetComponentInChildren<Text>();
+        text.text = "Score: " + score;
     }
 
     // Update is called once per frame
@@ -34,6 +45,7 @@ public class EnemyMovement : MonoBehaviour
         Vector3 vec = new Vector3(PlayerManager.player.transform.position.x, transform.position.y, PlayerManager.player.transform.position.z);
 
         transform.position = Vector3.MoveTowards(transform.position, vec, velocity * Time.deltaTime);
+        text.text = "Score: " + score;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -53,8 +65,21 @@ public class EnemyMovement : MonoBehaviour
             Destroy(gameObject);
             EnemyManager.curEnemies--;
             FireProjectile.ammoCt++;
+            score += 10;
             Debug.Log("Hit Enemy");
         }
+        else if (collider.gameObject.tag == "Player")
+        {
+            anim.SetBool("isAttacking", true);
+        }
 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            anim.SetBool("isAttacking", false);
+        }
     }
 }
